@@ -5,7 +5,7 @@
    võti. Kuni võti on "WEB3FORMS_KEY_HERE", näidatakse kohe soe
    kinnitusteade ilma saatmiseta (demo-režiim).
 ------------------------------------------------------------------- */
-const WEB3FORMS_KEY = "WEB3FORMS_KEY_HERE";
+const WEB3FORMS_KEY = "3f71e643-588f-4516-95df-3deb3ad145b2";
 
 const modal = document.getElementById('testpere-modal');
 const card = modal ? modal.querySelector('.tp-modal-card') : null;
@@ -134,8 +134,12 @@ form && form.addEventListener('submit', async e => {
     try {
       const data = new FormData(form);
       data.append('access_key', WEB3FORMS_KEY);
-      data.append('subject', 'Timpsu — uus testpere');
+      const childName = (document.getElementById('tp-child-name')?.value || '').trim();
+      data.append('subject', childName ? `Timpsu testpere — ${childName}` : 'Timpsu — uus testpere');
       data.append('from_name', 'Timpsu testpere vorm');
+      // Kui vastad hello@timpsu.ee-st, läheb vastus otse lapsevanemale
+      const parentEmail = (document.getElementById('tp-email')?.value || '').trim();
+      if (parentEmail) data.append('replyto', parentEmail);
       const res = await fetch('https://api.web3forms.com/submit', { method:'POST', body:data });
       const out = await res.json().catch(() => ({}));
       if (res.ok && out.success){ finish(); }
