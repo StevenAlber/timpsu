@@ -72,10 +72,27 @@ footer{padding:34px 24px 46px;text-align:center;background:#062f23;color:#fff}.f
 }
 @media(max-width:600px){
   .hero{min-height:920px}
-  .hero-image{height:62%;object-position:58% center}
-  .hero-vignette{background:linear-gradient(180deg,rgba(0,40,30,.01) 0%,rgba(0,40,30,.01) 44%,rgba(6,57,42,.14) 56%,rgba(7,63,47,.72) 70%,#073f2f 82%,#073f2f 100%)}
+  .hero-image{
+    height:76%;
+    object-position:58% center;
+    -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 72%,rgba(0,0,0,.96) 78%,rgba(0,0,0,.58) 88%,transparent 100%);
+    mask-image:linear-gradient(to bottom,#000 0%,#000 72%,rgba(0,0,0,.96) 78%,rgba(0,0,0,.58) 88%,transparent 100%);
+  }
+  .hero-vignette{background:linear-gradient(180deg,rgba(0,40,30,.02) 0%,rgba(0,40,30,0) 42%,rgba(7,63,47,.06) 58%,rgba(7,63,47,.32) 72%,#073f2f 91%,#073f2f 100%)}
   .brand{top:18px;left:18px;font-size:1.08rem}.brand-mark{width:38px;height:38px}
-  .top-action{top:23px;right:18px;font-size:.82rem}
+  .top-action{
+    top:24px;
+    right:18px;
+    max-width:150px;
+    justify-content:flex-end;
+    gap:8px;
+    padding:6px 0;
+    color:#fff;
+    font-size:.78rem;
+    line-height:1.1;
+    text-align:right;
+    text-shadow:0 2px 10px rgba(0,55,40,.55);
+  }
   .hero-copy{left:24px;right:24px;bottom:42px;width:auto}.eyebrow{margin-bottom:20px;position:relative;z-index:3}
   .hero h1{font-size:5.2rem}.hero-lead{font-size:2rem;margin-top:24px}.hero-note{font-size:1rem;max-width:100%}
   .opening{padding-top:104px}.opening:before{top:-150px;height:155px}
@@ -85,5 +102,9 @@ footer{padding:34px 24px 46px;text-align:center;background:#062f23;color:#fff}.f
   .voice-copy{padding:80px 24px 58px}.voice-image{height:470px}.voice-flow{gap:10px}.voice-flow i{display:none}
   .parent-features{gap:6px}.parent-features span{margin:0 8px}
   .finale{min-height:760px}.finale>img{object-position:60% center}
+}
+
+@media(max-width:420px){
+  .top-action{top:70px;right:18px;max-width:none;font-size:.8rem}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-image{animation:none}.world-strip img,.top-action,.top-action span,.cta-arrow,.finale-cta{transition:none}}
