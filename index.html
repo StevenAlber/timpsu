@@ -3,119 +3,117 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#75c84b" />
-  <title>Timpsu — Eesti keel, juured ja Eesti tunne</title>
-  <meta name="description" content="Timpsu on väike Eesti maailm välismaal kasvavale Eesti lapsele — keel, sugulased, lood ja loodus." />
+  <meta name="theme-color" content="#83cef0" />
+  <title>Timpsu — väike Eesti maailm lapse taskus</title>
+  <meta name="description" content="Timpsu on väike Eesti maailm välismaal kasvavale Eesti lapsele — keel, juured, lood ja loodus." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="#algus" aria-label="Timpsu avaleht">
-      <span class="brand-mark">T</span><span>Timpsu</span>
-    </a>
-    <nav aria-label="Põhinavigatsioon">
-      <a href="#maailm">Timpsu maailm</a>
-      <a href="#kuidas">Kuidas töötab</a>
-      <a class="nav-cta" href="#testpere">Tule testpereks</a>
-    </nav>
-  </header>
-
   <main>
     <section class="hero" id="algus" aria-labelledby="hero-title">
-      <img class="hero-image" src="hero.jpg" alt="Timpsu joonistab Eesti loodust kasesalus, ümber mustikad, kukeseened, pääsuke ja rebane." />
-      <div class="hero-shade"></div>
+      <img class="hero-image" src="hero.jpg" alt="Siilipoiss Timpsu joonistab Eesti loodust kasesalus." />
+      <div class="hero-vignette" aria-hidden="true"></div>
+
+      <a class="brand" href="#algus" aria-label="Timpsu avaleht">
+        <span class="brand-mark">T</span>
+        <span>Timpsu</span>
+      </a>
+
+      <a class="top-action" href="#testpere">Tule testpereks <span aria-hidden="true">→</span></a>
+
       <div class="hero-copy">
         <p class="eyebrow">Väike Eesti maailm lapse taskus</p>
         <h1 id="hero-title">Timpsu</h1>
-        <p class="hero-lead">Eesti keel, juured ja Eesti tunne välismaal kasvavale Eesti lapsele.</p>
-        <p class="hero-note">Laps avastab koos siilipoiss Timpsuga metsa, marju, loomi, lugusid ja sugulasi. Eesti sõnavara omandab ta mängides.</p>
-        <div class="hero-actions">
-          <a class="button primary hero-cta" href="#testpere"><span>Tule esimeseks testpereks</span><b aria-hidden="true">→</b></a>
-          <a class="world-link" href="#maailm">Vaata Timpsu maailma <span aria-hidden="true">↓</span></a>
+        <p class="hero-lead">Tule minuga<br><em>Eesti metsa.</em></p>
+        <p class="hero-note">Lood, loomad ja sõnad, mille kaudu kasvavad eesti keel, juured ja Eesti tunne.</p>
+        <a class="hero-cta" href="#maailm">
+          <span>Astume sisse</span>
+          <span class="cta-arrow" aria-hidden="true">↓</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="opening" id="maailm">
+      <div class="opening-copy">
+        <p class="kicker">Mitte õppetund. Päris seiklus.</p>
+        <h2>Laps ei ava lihtsalt äppi.<br><span>Ta astub Kodu-Eestisse.</span></h2>
+        <p>Timpsu maailmas tulevad eesti sõnad kaasa loomulikult — koos mustikate, metsaradade, pääsukeste, lugude ning vanaema ja vanaisaga.</p>
+      </div>
+      <div class="opening-path" aria-hidden="true"></div>
+    </section>
+
+    <section class="chapter chapter-left">
+      <div class="chapter-image-wrap">
+        <img src="tervitab.jpg" alt="Timpsu tervitab last Eesti looduses." loading="lazy" />
+        <span class="chapter-number">01</span>
+      </div>
+      <div class="chapter-copy">
+        <p class="kicker">Esimene kohtumine</p>
+        <h2>Timpsu ütleb:<br>„Tere, tule kaasa!”</h2>
+        <p>Väike siil ei seleta ega testi. Ta kutsub lapse mängima, kuulama ja ise eesti keeles vastama.</p>
+      </div>
+    </section>
+
+    <section class="chapter chapter-right">
+      <div class="chapter-image-wrap">
+        <img src="metsasaak.jpg" alt="Timpsu avastab metsas mustikaid ja kukeseeni." loading="lazy" />
+        <span class="chapter-number">02</span>
+      </div>
+      <div class="chapter-copy">
+        <p class="kicker">Mets täis sõnu</p>
+        <h2>Mustikas. Sammal.<br>Kukeseen.</h2>
+        <p>Laps puudutab, kuulab, kordab ja avastab. Sõnavara ei tule töövihikust, vaid maailmast, kuhu tahaks päriselt sisse astuda.</p>
+      </div>
+    </section>
+
+    <section class="world-strip" aria-label="Timpsu maailma hetked">
+      <figure><img src="joonistab.jpg" alt="Timpsu joonistab Eestit." loading="lazy"><figcaption>Joonista Eestit</figcaption></figure>
+      <figure><img src="loomad.jpg" alt="Timpsu kohtub metsaloomadega." loading="lazy"><figcaption>Kohtu loomadega</figcaption></figure>
+      <figure><img src="lood.jpg" alt="Timpsu kuulab ja jutustab lugusid." loading="lazy"><figcaption>Kuula lugusid</figcaption></figure>
+    </section>
+
+    <section class="voice" id="kuidas">
+      <div class="voice-copy">
+        <p class="kicker">Kõige tähtsam hetk</p>
+        <h2>„Tere, vanaema!”</h2>
+        <p>Laps kuuleb eestikeelset tervitust, ütleb selle ise ja saadab oma hääle vanaemale või vanaisale. Nii muutub keel päris sidemeks.</p>
+        <div class="voice-flow" aria-label="Kolm sammu">
+          <span><b>1</b> Kuula</span>
+          <i aria-hidden="true">→</i>
+          <span><b>2</b> Ütle</span>
+          <i aria-hidden="true">→</i>
+          <span><b>3</b> Saada</span>
         </div>
       </div>
-      <div class="scroll-hint" aria-hidden="true">↓</div>
-    </section>
-
-    <section class="intro wrap" id="maailm">
-      <div class="section-heading">
-        <p class="eyebrow green">Mitte töövihik. Päris seiklus.</p>
-        <h2>Laps ei ava lihtsalt äppi<br>Ta astub Kodu-Eestisse</h2>
-        <p>Timpsu seob eesti keele sellega, mis last päriselt köidab: mets, mustikad, kukeseened, loomad, joonistamine, lood ning vanaema ja vanaisa.</p>
-      </div>
-
-      <div class="story-grid">
-        <article class="story-card berry">
-          <img src="tervitab.jpg" alt="Timpsu lehvitab rõõmsalt Eesti looduses." loading="lazy" />
-          <div class="card-copy"><span>01</span><h3>Timpsu tervitab</h3><p>Väike siil kutsub lapse rõõmsalt Eesti maailma avastama.</p></div>
-        </article>
-        <article class="story-card sky">
-          <img src="joonistab.jpg" alt="Timpsu joonistab vihikusse Eesti jõge ja metsa." loading="lazy" />
-          <div class="card-copy"><span>02</span><h3>Timpsu joonistab Eestit</h3><p>Mets, jõgi ja puud saavad pildiks — sõnad tulevad loomulikult kaasa.</p></div>
-        </article>
-        <article class="story-card sun">
-          <img src="metsasaak.jpg" alt="Timpsu hoiab mustikaid ja kukeseent." loading="lazy" />
-          <div class="card-copy"><span>03</span><h3>Timpsu avastab metsa</h3><p>Mustikad, kukeseened ja sammal muudavad Eesti lapse jaoks päriseks.</p></div>
-        </article>
-        <article class="story-card grass">
-          <img src="vanavanemad.jpg" alt="Timpsu kohtub vanaema ja vanaisaga Eesti talu trepil." loading="lazy" />
-          <div class="card-copy"><span>04</span><h3>Vanaema ja vanaisa on lähedal</h3><p>Lihtsad laused ja häälsõnumid aitavad hoida sidet sugulastega Eestis.</p></div>
-        </article>
-        <article class="story-card blue">
-          <img src="loomad.jpg" alt="Timpsu vaatleb metsas pääsukest, rebast ja jänest." loading="lazy" />
-          <div class="card-copy"><span>05</span><h3>Loomad ja linnud ärkavad ellu</h3><p>Pääsuke, rebane, jänes ja metsarada teevad õppimisest avastusretke.</p></div>
-        </article>
-        <article class="story-card violet">
-          <img src="lood.jpg" alt="Timpsu joonistab Eesti loodust vihikusse." loading="lazy" />
-          <div class="card-copy"><span>06</span><h3>Lood, mida laps tahab kuulata</h3><p>Muinasjutud ja Kodu-Eesti lood annavad põhjuse ikka tagasi tulla.</p></div>
-        </article>
+      <div class="voice-image">
+        <img src="vanavanemad.jpg" alt="Timpsu koos vanaema ja vanaisaga." loading="lazy" />
       </div>
     </section>
 
-    <section class="how" id="kuidas">
-      <div class="wrap how-inner">
-        <div class="section-heading light">
-          <p class="eyebrow">Kolm lihtsat sammu</p>
-          <h2>Kuula. Ütle. Saada.</h2>
-          <p>Timpsu ei sunni last õppima. Ta kutsub lapse rääkima.</p>
-        </div>
-        <div class="steps">
-          <article><div class="step-icon">▶</div><strong>Kuula eesti keelt</strong><p>Päris inimhääl, lihtsad sõnad ja laused. Lugemisoskust pole vaja.</p></article>
-          <article><div class="step-icon">●</div><strong>Salvesta oma hääl</strong><p>Laps kordab, kuuleb ennast ja saab kohe väikese õnnestumise tunde.</p></article>
-          <article><div class="step-icon">↗</div><strong>Saada vanaemale</strong><p>Eestikeelne tervitus jõuab häälsõnumina vanaema, vanaisa või sugulaseni.</p></article>
-        </div>
+    <section class="parent-note">
+      <p class="kicker">Vanemale rahulik. Lapsele põnev.</p>
+      <h2>Üks turvaline Eesti maailm.</h2>
+      <div class="parent-features">
+        <span>Offline</span><span>Reklaamita</span><span>Kontota</span><span>Ühekordne ost</span>
       </div>
     </section>
 
-    <section class="promise wrap">
-      <div class="promise-copy">
-        <p class="eyebrow green">Vanemale rahulik. Lapsele põnev.</p>
-        <h2>Turvaline ja lihtne algusest lõpuni</h2>
-      </div>
-      <div class="promise-list">
-        <div><b>Offline</b><span>Töötab ka ilma internetita</span></div>
-        <div><b>Reklaamita</b><span>Ei katkesta lapse maailma</span></div>
-        <div><b>Kontota</b><span>Lapse andmeid ei koguta</span></div>
-        <div><b>Üks ost</b><span>Null tellimust ja null üllatust</span></div>
-      </div>
-    </section>
-
-    <section class="cta" id="testpere">
-      <div class="cta-art" aria-hidden="true"></div>
-      <div class="cta-copy">
-        <p class="eyebrow">Timpsu otsib esimesi peresid</p>
-        <h2>Kas sinu laps vastaks vanaemale või vanaisale eesti keeles?</h2>
-        <p>Liitu testperega. Saad esimeste seas proovida ning aidata kujundada Timpsut selliseks, mida välismaal kasvav Eesti laps päriselt armastab.</p>
-        <a class="button primary large" href="#" data-form-link>Liitun testperega</a>
+    <section class="finale" id="testpere">
+      <img src="hero.jpg" alt="" aria-hidden="true" />
+      <div class="finale-shade" aria-hidden="true"></div>
+      <div class="finale-copy">
+        <p class="kicker">Timpsu otsib esimesi peresid</p>
+        <h2>Kas sinu laps tuleks Timpsuga Eesti metsa?</h2>
+        <p>Liitu testperega ja aita luua maailm, mida välismaal kasvav Eesti laps päriselt armastab.</p>
+        <a class="finale-cta" href="#" data-form-link>Jah, meie pere tuleb <span aria-hidden="true">→</span></a>
         <small>Testvormi täidab lapsevanem. Laste andmeid me ei kogu.</small>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="brand"><span class="brand-mark">T</span><span>Timpsu</span></div>
+    <div class="footer-brand"><span class="brand-mark">T</span><strong>Timpsu</strong></div>
     <p>© 2026 Timpsu · timpsu.ee</p>
-    <p>Eesti keel, juured ja Eesti tunne välismaal kasvavale Eesti lapsele.</p>
   </footer>
   <script src="script.js"></script>
 </body>
