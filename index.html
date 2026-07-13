@@ -115,6 +115,73 @@
     <div class="footer-brand"><span class="brand-mark">T</span><strong>Timpsu</strong></div>
     <p>© 2026 Timpsu · timpsu.ee</p>
   </footer>
+
+  <div class="tp-modal" id="testpere-modal" hidden>
+    <div class="tp-modal-backdrop" data-close></div>
+    <div class="tp-modal-card" role="dialog" aria-modal="true" aria-labelledby="tp-modal-title" tabindex="-1">
+      <button class="tp-modal-close" type="button" aria-label="Sulge" data-close><span aria-hidden="true">×</span></button>
+
+      <div class="tp-view" data-view="form">
+        <div class="tp-modal-head">
+          <span class="tp-modal-mark" aria-hidden="true">T</span>
+          <p class="tp-modal-eyebrow">Timpsu otsib esimesi peresid</p>
+          <h2 id="tp-modal-title">Tule meie testpereks</h2>
+          <p class="tp-modal-sub">See ei ole kontaktivorm — see on kutse Eesti metsa</p>
+        </div>
+
+        <form class="tp-form" id="tp-form" novalidate>
+          <div class="tp-field">
+            <label for="tp-child-name">Lapse eesnimi</label>
+            <input id="tp-child-name" name="lapse_eesnimi" type="text" autocomplete="off" required />
+          </div>
+
+          <div class="tp-row">
+            <div class="tp-field">
+              <label for="tp-child-age">Lapse vanus</label>
+              <select id="tp-child-age" name="lapse_vanus" required>
+                <option value="" disabled selected>Vali</option>
+                <option>0</option><option>1</option><option>2</option><option>3</option>
+                <option>4</option><option>5</option><option>6</option><option>7</option>
+                <option>8</option><option>9</option><option>10</option><option>11</option>
+                <option>12</option><option value="13+">13+</option>
+              </select>
+            </div>
+            <div class="tp-field">
+              <label for="tp-country">Riik</label>
+              <input id="tp-country" name="riik" type="text" autocomplete="country-name" required />
+            </div>
+          </div>
+
+          <div class="tp-field">
+            <label for="tp-email">Vanema e-post</label>
+            <input id="tp-email" name="vanema_epost" type="email" autocomplete="email" required />
+          </div>
+
+          <div class="tp-field">
+            <label for="tp-comment">Kommentaar <span class="tp-optional">vabatahtlik</span></label>
+            <textarea id="tp-comment" name="kommentaar" rows="3"></textarea>
+          </div>
+
+          <p class="tp-error" id="tp-error" role="alert" hidden></p>
+
+          <button class="tp-submit" type="submit">
+            <span class="tp-submit-label">Meie pere tahab kaasa tulla</span>
+          </button>
+          <p class="tp-fineprint">Vormi täidab lapsevanem. Laste andmeid me ei kogu.</p>
+        </form>
+      </div>
+
+      <div class="tp-view tp-done" data-view="done" hidden>
+        <span class="tp-done-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>
+        </span>
+        <h2 tabindex="-1">Aitäh, et tulete kaasa</h2>
+        <p>Timpsu paneb teie pere kirja ja annab peagi märku, kui esimesed metsarajad valmis saavad.</p>
+        <button class="tp-done-close" type="button" data-close>Tagasi metsa</button>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

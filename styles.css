@@ -17,7 +17,7 @@ img{display:block;max-width:100%}
 
 .hero{position:relative;min-height:100svh;overflow:hidden;background:#7ed0ef;color:#fff}
 .hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 44%}
-.hero-vignette{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,42,37,.04) 0%,rgba(0,38,29,0) 42%,rgba(0,42,30,.12) 62%,rgba(7,63,47,.72) 82%,#073f2f 100%)}
+.hero-vignette{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,42,37,.04) 0%,rgba(0,38,29,0) 42%,rgba(0,42,30,.12) 62%,rgba(8,63,45,.5) 78%,rgba(8,63,45,.9) 92%,#083f2d 100%)}
 .brand{position:absolute;z-index:3;top:22px;transform:scale(.92);transform-origin:left top;left:clamp(20px,5vw,72px);display:flex;align-items:center;gap:10px;font-weight:950;font-size:1.3rem;text-shadow:0 2px 12px rgba(0,50,35,.2)}
 .brand-mark{display:grid;place-items:center;width:42px;height:42px;border-radius:50% 45% 52% 46%;background:linear-gradient(145deg,#83dd55,#57b83c);color:#fff;box-shadow:inset 0 -5px 0 rgba(0,0,0,.08),0 8px 18px rgba(0,67,37,.18);transform:rotate(-4deg)}
 .top-action{position:absolute;z-index:3;top:25px;right:clamp(20px,5vw,72px);display:flex;gap:10px;align-items:center;font-weight:900;font-size:.95rem;padding:9px 2px 8px;text-shadow:0 2px 12px rgba(0,50,35,.25)}
@@ -41,7 +41,9 @@ img{display:block;max-width:100%}
 .hero h1{text-shadow:0 5px 0 rgba(0,0,0,.075),0 14px 30px rgba(0,45,32,.14)}
 @keyframes forest-breathe{from{transform:scale(1)}to{transform:scale(1.018)}}
 
-.opening{position:relative;margin-top:-2px;padding:clamp(92px,13vw,170px) 24px clamp(110px,15vw,190px);background:linear-gradient(180deg,#083f2d 0%,#0a5138 100%);color:#fff;text-align:center;overflow:hidden}
+.opening{position:relative;isolation:isolate;margin-top:-3px;padding:clamp(92px,13vw,170px) 24px clamp(110px,15vw,190px);background:linear-gradient(180deg,#083f2d 0%,#083f2d 5%,#0a5138 100%);color:#fff;text-align:center;overflow:hidden}
+/* Nähtamatu tolm, mis murrab gradiendi virvenduse (banding) */
+.opening:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.05;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:140px 140px}
 .opening:before{content:"";position:absolute;left:0;right:0;top:-180px;height:190px;background:linear-gradient(180deg,rgba(7,63,47,0) 0%,rgba(7,63,47,.5) 48%,#083f2d 100%);pointer-events:none}
 .opening-copy{position:relative;z-index:2;max-width:930px;margin:auto}.opening .kicker{color:#b9e88e}.opening h2{margin:0;font-size:clamp(2.7rem,7vw,6.4rem);line-height:.95;letter-spacing:-.06em}.opening h2 span{color:#f9d96d}.opening-copy>p:last-child{max-width:730px;margin:32px auto 0;color:rgba(255,255,255,.76);font-size:clamp(1.04rem,2vw,1.28rem)}
 .opening-path{position:absolute;width:460px;height:460px;border:2px solid rgba(255,255,255,.06);border-radius:50%;right:-210px;bottom:-260px}
@@ -78,7 +80,7 @@ footer{padding:34px 24px 46px;text-align:center;background:#062f23;color:#fff}.f
     -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 72%,rgba(0,0,0,.96) 78%,rgba(0,0,0,.58) 88%,transparent 100%);
     mask-image:linear-gradient(to bottom,#000 0%,#000 72%,rgba(0,0,0,.96) 78%,rgba(0,0,0,.58) 88%,transparent 100%);
   }
-  .hero-vignette{background:linear-gradient(180deg,rgba(0,40,30,.02) 0%,rgba(0,40,30,0) 42%,rgba(7,63,47,.06) 58%,rgba(7,63,47,.32) 72%,#073f2f 91%,#073f2f 100%)}
+  .hero-vignette{background:linear-gradient(180deg,rgba(0,40,30,.02) 0%,rgba(0,40,30,0) 42%,rgba(8,63,45,.06) 58%,rgba(8,63,45,.32) 72%,rgba(8,63,45,.86) 88%,#083f2d 96%,#083f2d 100%)}
   .brand{top:18px;left:18px;font-size:1.08rem}.brand-mark{width:38px;height:38px}
   .top-action{
     top:24px;
@@ -108,3 +110,65 @@ footer{padding:34px 24px 46px;text-align:center;background:#062f23;color:#fff}.f
   .top-action{top:70px;right:18px;max-width:none;font-size:.8rem}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-image{animation:none}.world-strip img,.top-action,.top-action span,.cta-arrow,.finale-cta{transition:none}}
+
+/* ============================================================
+   Testpere modaal — Timpsu maailm
+   ============================================================ */
+.tp-modal{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:22px;opacity:0;visibility:hidden;transition:opacity .28s ease,visibility .28s ease}
+.tp-modal.tp-open{opacity:1;visibility:visible}
+.tp-modal[hidden]{display:none}
+.tp-modal-backdrop{position:absolute;inset:0;background:radial-gradient(120% 120% at 50% 20%,rgba(9,68,45,.62),rgba(4,32,23,.82));-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+
+.tp-modal-card{position:relative;z-index:1;width:min(94vw,440px);max-height:min(92svh,760px);overflow-y:auto;-webkit-overflow-scrolling:touch;background:var(--cream);color:var(--ink);border-radius:34px 32px 34px 30px;padding:clamp(26px,5vw,40px) clamp(22px,5vw,36px) clamp(24px,4vw,32px);box-shadow:0 30px 70px rgba(5,44,30,.36),0 4px 0 rgba(255,255,255,.5) inset;transform:translateY(16px) scale(.985);transition:transform .3s cubic-bezier(.2,.8,.25,1)}
+.tp-modal.tp-open .tp-modal-card{transform:none}
+
+.tp-modal-close{position:absolute;top:14px;right:14px;display:grid;place-items:center;width:40px;height:40px;border:none;border-radius:50%;background:rgba(18,60,49,.06);color:#3c5a4d;font-size:1.5rem;line-height:1;cursor:pointer;transition:background .2s ease,transform .2s ease}
+.tp-modal-close:hover{background:rgba(18,60,49,.12);transform:rotate(90deg)}
+
+.tp-modal-head{text-align:center;margin-bottom:24px}
+.tp-modal-mark{display:inline-grid;place-items:center;width:56px;height:56px;margin:0 auto 16px;border-radius:52% 46% 54% 48%/48% 52% 46% 54%;background:linear-gradient(145deg,#83dd55,#57b83c);color:#fff;font-weight:950;font-size:1.6rem;box-shadow:inset 0 -5px 0 rgba(0,0,0,.08),0 10px 22px rgba(0,67,37,.22);transform:rotate(-4deg)}
+.tp-modal-eyebrow{margin:0 0 8px;text-transform:uppercase;letter-spacing:.14em;font-size:.68rem;font-weight:950;color:#4f9f48}
+.tp-modal-head h2{margin:0;font-size:clamp(1.7rem,5.5vw,2.15rem);line-height:1;letter-spacing:-.045em;color:var(--forest)}
+.tp-modal-sub{margin:12px auto 0;max-width:320px;color:#5d7a6d;font-size:.98rem;line-height:1.45}
+
+.tp-form{display:flex;flex-direction:column;gap:15px}
+.tp-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.tp-field{display:flex;flex-direction:column;gap:7px;min-width:0}
+.tp-field label{font-size:.82rem;font-weight:900;color:#2c5344;letter-spacing:.005em}
+.tp-optional{font-weight:700;color:#96a89f;text-transform:lowercase}
+.tp-field input,.tp-field select,.tp-field textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);background:#fff;border:2px solid #dcebe1;border-radius:15px;padding:13px 15px;transition:border-color .18s ease,box-shadow .18s ease;-webkit-appearance:none;appearance:none}
+.tp-field textarea{resize:vertical;min-height:74px;line-height:1.45}
+.tp-field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' stroke='%234f9f48' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 5l4 4 4-4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 15px center;padding-right:40px;cursor:pointer}
+.tp-field input:focus,.tp-field select:focus,.tp-field textarea:focus{outline:none;border-color:var(--leaf);box-shadow:0 0 0 4px rgba(120,201,79,.2)}
+.tp-field input:-webkit-autofill{-webkit-text-fill-color:var(--ink);-webkit-box-shadow:0 0 0 40px #fff inset}
+.tp-invalid input,.tp-invalid select{border-color:var(--berry);box-shadow:0 0 0 4px rgba(242,60,107,.14)}
+
+.tp-error{margin:2px 0 0;color:var(--berry);font-size:.86rem;font-weight:800}
+.tp-error[hidden]{display:none}
+
+.tp-submit{margin-top:6px;display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:16px 22px;border:none;border-radius:999px;background:var(--berry);color:#fff;font:inherit;font-weight:950;font-size:1.04rem;cursor:pointer;box-shadow:0 7px 0 #b9284f,0 16px 30px rgba(55,0,18,.22);transition:transform .18s ease,box-shadow .18s ease,opacity .2s ease}
+.tp-submit:hover{transform:translateY(-2px);box-shadow:0 9px 0 #b9284f,0 20px 34px rgba(55,0,18,.24)}
+.tp-submit:active{transform:translateY(2px);box-shadow:0 4px 0 #b9284f,0 10px 20px rgba(55,0,18,.2)}
+.tp-submit[disabled]{opacity:.7;cursor:default;transform:none;box-shadow:0 7px 0 #b9284f}
+.tp-fineprint{margin:14px 0 0;text-align:center;color:#8aa093;font-size:.8rem;line-height:1.4}
+
+.tp-done{text-align:center;padding:8px 4px 6px;display:flex;flex-direction:column;align-items:center}
+.tp-done-mark{display:grid;place-items:center;width:78px;height:78px;margin:6px auto 20px;border-radius:54% 46% 52% 48%/48% 54% 46% 52%;background:linear-gradient(145deg,#8fe05f,#4faa39);color:#fff;box-shadow:inset 0 -6px 0 rgba(0,0,0,.08),0 14px 30px rgba(0,67,37,.24)}
+.tp-done h2{margin:0 0 12px;font-size:clamp(1.7rem,5.5vw,2.15rem);line-height:1.02;letter-spacing:-.04em;color:var(--forest);outline:none}
+.tp-done p{margin:0 auto;max-width:330px;color:#5d7a6d;font-size:1.02rem;line-height:1.5}
+.tp-done-close{margin-top:26px;padding:13px 26px;border:2px solid #cfe4d5;border-radius:999px;background:#fff;color:var(--forest);font:inherit;font-weight:900;font-size:.98rem;cursor:pointer;transition:background .18s ease,border-color .18s ease,transform .18s ease}
+.tp-done-close:hover{background:#f1f8f3;border-color:var(--leaf);transform:translateY(-2px)}
+
+@media(max-width:600px){
+  .tp-modal{padding:14px}
+  .tp-modal-card{width:100%;max-height:94svh;border-radius:30px 28px 30px 26px}
+  .tp-row{grid-template-columns:1fr 1fr;gap:11px}
+}
+@media(max-width:360px){
+  .tp-row{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .tp-modal,.tp-modal-card,.tp-submit,.tp-done-close,.tp-modal-close{transition:none}
+  .tp-modal-card{transform:none}
+  .tp-modal-close:hover{transform:none}
+}
